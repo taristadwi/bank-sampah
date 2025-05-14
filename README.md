@@ -1,42 +1,95 @@
-# Laravel 8 - Ecommerce application
+# 🌿 Sistem Informasi Bank Sampah – Laravel 
 
-## Screenshots
+Sistem Informasi Bank Sampah berbasis Laravel yang mendukung pengelolaan transaksi jual beli sampah secara online, terintegrasi dengan fitur marketplace, manajemen pengguna, tracking pesanan, dan sistem ulasan.
 
-![preview img](/preview.png)
+## 👥 Role & Use Case
 
-## Run Locally
+### 1. SuperAdmin
+- Mengelola Aktivitas Marketplace
+- Mengelola Admin Bank Sampah
+- Melihat Laporan Secara Global
 
-Clone the project
+### 2. Bank Sampah (Admin Cabang)
+- Mengelola Produk
+- Mengelola Transaksi
+- Melihat Ulasan
+
+### 3. User (Nasabah / Konsumen)
+- Melakukan Registrasi & Login
+- Mencari Produk
+- Melakukan Transaksi
+- Melihat Riwayat Pembelian
+- Memberikan Ulasan
+- Melihat Profil Bank Sampah
+- Tracking Pesanan
+
+## 🔧 Teknologi yang Digunakan
+
+- **Laravel 8**
+- **MySQL**
+- **Blade Template / Bootstrap** (atau bisa pakai Tailwind)
+- **Spatie Laravel Permission** (untuk role-based access control)
+- **Laravel Excel** (opsional, untuk ekspor laporan)
+- **Laravel Sanctum** (jika pakai SPA / token login)
+
+## 📦 Fitur Aplikasi
+
+- Autentikasi dan otorisasi pengguna
+- CRUD Produk oleh Bank Sampah
+- Transaksi pembelian sampah oleh User
+- Ulasan produk & tracking pesanan
+- Pengelolaan data global oleh SuperAdmin
+- Dashboard & riwayat transaksi
+- Profil Bank Sampah untuk publik
+
+## ⚙️ Instalasi
 
 ```bash
-  git clone https://github.com/abdulaziz-m5u/laravel-ecommerce.git project-name
+# Clone repo
+git clone https://github.com/username/bank-sampah-laravel8.git
+cd bank-sampah-laravel8
+
+# Install dependency PHP
+composer install
+
+# Setup file env
+cp .env.example .env
+php artisan key:generate
+
+# Konfigurasi database
+# Buka dan isi .env file:
+# DB_DATABASE=bank_sampah
+# DB_USERNAME=root
+# DB_PASSWORD=
+
+# Migrasi dan seeding
+php artisan migrate --seed
+
+# Jalankan server
+php artisan serve
 ```
 
-Go to the project directory
+## 📁 Struktur Utama
 
-```bash
-  cd project-name
+```
+app/
+├── Models/            # User, Produk, Transaksi, Ulasan, dll
+├── Http/
+│   ├── Controllers/   # SuperAdminController, ProdukController, dll
+│   └── Middleware/
+routes/
+├── web.php            # Routing aplikasi web
+resources/
+├── views/             # Blade template
+database/
+├── migrations/        # Struktur tabel
+├── seeders/           # Seeder user & role
 ```
 
--   Copy .env.example file to .env and edit database credentials there
+## 📃 Lisensi
 
-```bash
-    composer install
-```
+Proyek ini menggunakan lisensi [MIT](LICENSE).
 
-```bash
-    php artisan key:generate
-```
+---
 
-```bash
-    php artisan artisan migrate:fresh --seed
-```
-
-```bash
-    php artisan storage:link
-```
-
-#### Login
-
--   email = admin@example.com
--   password = 123
+> Dibuat oleh [Nama Kamu / Tim Pengembang] — Proyek Tugas / Production App
