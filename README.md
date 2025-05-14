@@ -89,7 +89,4 @@ database/
 ## 📃 Lisensi
 
 Proyek ini menggunakan lisensi [MIT](LICENSE).
-
----
-
-> Dibuat oleh [Nama Kamu / Tim Pengembang] — Proyek Tugas / Production App
+ 
