@@ -1,0 +1,1 @@
+<h2>Hello World !</h2><?php /**PATH /Volumes/Storage/Document/project/joki/laravel-ecommerce/resources/views/welcome.blade.php ENDPATH**/ ?>
